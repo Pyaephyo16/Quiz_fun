@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_fun/FormPages/LeaderBoardPage.dart';
 import 'package:quiz_fun/FormPages/first_input_form.dart';
 import 'package:quiz_fun/FormPages/second_input_form.dart';
 
@@ -7,6 +8,7 @@ void main() {
 }
 
 int totalCorrectAnswer = 0;
+String userName = "";
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -21,7 +23,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: SecondInputFormPage(),
+      home: MyHomePage(),
     );
   }
 }

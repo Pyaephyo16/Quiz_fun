@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:quiz_fun/FormPages/LeaderBoardPage.dart';
 import 'package:quiz_fun/FormPages/second_input_form.dart';
 import 'package:quiz_fun/QuizOne/QuizTwoPage.dart';
 import 'package:quiz_fun/main.dart';
 
-class Quizfourpage extends StatefulWidget {
-  const Quizfourpage({super.key});
+class Quiztwelvepage extends StatefulWidget {
+  const Quiztwelvepage({super.key});
 
   @override
-  State<Quizfourpage> createState() => _QuizfourpageState();
+  State<Quiztwelvepage> createState() => _QuiztwelvepageState();
 }
 
 int selectValue = 5;
 bool isAppear = false;
 
-class _QuizfourpageState extends State<Quizfourpage> {
+class _QuiztwelvepageState extends State<Quiztwelvepage> {
   @override
   Widget build(BuildContext context) {
 
@@ -38,12 +39,12 @@ class _QuizfourpageState extends State<Quizfourpage> {
               children: [
                 Center(
                     child: Image.asset(
-                      "./asset/ans_4.jpg",
+                      "./asset/ans_12.jpg",
                       width: 200,height: 200,
                     )
                 ),
                 Text(
-                  "What is the tallest type of tree?",
+                  "Which planet has the most gravity?",
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
@@ -62,7 +63,7 @@ class _QuizfourpageState extends State<Quizfourpage> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Text(
-                          "Cedar",
+                          "Mars",
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -83,7 +84,7 @@ class _QuizfourpageState extends State<Quizfourpage> {
                     Row(
                       children: [
                         Text(
-                          "Teak",
+                          "Earth",
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -114,7 +115,7 @@ class _QuizfourpageState extends State<Quizfourpage> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Text(
-                          "Mahogany",
+                          "Moon",
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -135,7 +136,7 @@ class _QuizfourpageState extends State<Quizfourpage> {
                     Row(
                       children: [
                         Text(
-                          "Redwood",
+                          "Jupiter",
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -218,11 +219,11 @@ class _QuizfourpageState extends State<Quizfourpage> {
       builder: (BuildContext context) {
         return AlertDialog(
           title: Text('Congratulation!'),
-          content: Text('You Completed Section 1. Let\'s start Section 2'),
+          content: Text('You Completed All Sections'),
           actions: [
             ElevatedButton(
               onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(builder: (context) => SecondInputFormPage()));
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => Leaderboardpage()));
               },
               child: Text('OK'),
             ),
@@ -230,4 +231,4 @@ class _QuizfourpageState extends State<Quizfourpage> {
         );
       },
     );
-}}
+  }}

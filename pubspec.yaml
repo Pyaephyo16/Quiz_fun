@@ -66,6 +66,17 @@ flutter:
     - asset/ans_2.jpg
     - asset/ans_3.jpeg
     - asset/ans_4.jpg
+    - asset/ans_5.jpg
+    - asset/ans_6.jpeg
+    - asset/ans_7.jpg
+    - asset/ans_8.jpg
+    - asset/ans_9.jpeg
+    - asset/ans_10.jpg
+    - asset/ans_11.jpeg
+    - asset/ans_12.jpg
+    - asset/ppl.jpg
+    - asset/img.png
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

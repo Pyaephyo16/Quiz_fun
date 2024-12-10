@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_fun/FormPages/second_input_form.dart';
 import 'package:quiz_fun/QuizOne/QuizTwoPage.dart';
+import 'package:quiz_fun/QuizTwo/QuizSevenPage.dart';
 import 'package:quiz_fun/main.dart';
 
-class Quizfourpage extends StatefulWidget {
-  const Quizfourpage({super.key});
+class Quizsixpage extends StatefulWidget {
+  const Quizsixpage({super.key});
 
   @override
-  State<Quizfourpage> createState() => _QuizfourpageState();
+  State<Quizsixpage> createState() => _QuizsixpageState();
 }
 
 int selectValue = 5;
 bool isAppear = false;
 
-class _QuizfourpageState extends State<Quizfourpage> {
+class _QuizsixpageState extends State<Quizsixpage> {
   @override
   Widget build(BuildContext context) {
 
@@ -38,12 +38,12 @@ class _QuizfourpageState extends State<Quizfourpage> {
               children: [
                 Center(
                     child: Image.asset(
-                      "./asset/ans_4.jpg",
+                      "./asset/ans_6.jpeg",
                       width: 200,height: 200,
                     )
                 ),
                 Text(
-                  "What is the tallest type of tree?",
+                  "What is the name of the largest ocean on Earth?",
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
@@ -62,7 +62,7 @@ class _QuizfourpageState extends State<Quizfourpage> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Text(
-                          "Cedar",
+                          "Pacific Ocean",
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -83,7 +83,7 @@ class _QuizfourpageState extends State<Quizfourpage> {
                     Row(
                       children: [
                         Text(
-                          "Teak",
+                          "Atlantic Ocean",
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -114,7 +114,7 @@ class _QuizfourpageState extends State<Quizfourpage> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Text(
-                          "Mahogany",
+                          "Indian Ocean",
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -135,7 +135,7 @@ class _QuizfourpageState extends State<Quizfourpage> {
                     Row(
                       children: [
                         Text(
-                          "Redwood",
+                          "Arctic Ocean",
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -163,7 +163,7 @@ class _QuizfourpageState extends State<Quizfourpage> {
                           onPressed: (){
                             setState(() {
                               isAppear = true;
-                              if(selectValue==3){
+                              if(selectValue==0){
                                 totalCorrectAnswer++;
                               }
                             });
@@ -179,7 +179,7 @@ class _QuizfourpageState extends State<Quizfourpage> {
                       padding: const EdgeInsets.only(top: 22),
                       child: OutlinedButton(
                           onPressed: (){
-                            _showAlert(context);
+                            Navigator.of(context).push(MaterialPageRoute(builder: (context) => Quizsevenpage()));
                           },
                           child: Text("Next",
                             style: TextStyle(
@@ -196,11 +196,11 @@ class _QuizfourpageState extends State<Quizfourpage> {
                     child: Visibility(
                       visible: isAppear,
                       child: Text(
-                        (selectValue == 3) ? "Correct" : "False",
+                        (selectValue == 0) ? "Correct" : "False",
                         style: TextStyle(
                           fontSize: 30,
                           fontWeight: FontWeight.bold,
-                          color: (selectValue == 3 ) ? Colors.green :Colors.red,
+                          color: (selectValue == 0) ? Colors.green :Colors.red,
                         ),),
                     )),
 
@@ -211,23 +211,4 @@ class _QuizfourpageState extends State<Quizfourpage> {
       ),
     );
   }
-
-  void _showAlert(BuildContext context) {
-    showDialog(
-      context: context,
-      builder: (BuildContext context) {
-        return AlertDialog(
-          title: Text('Congratulation!'),
-          content: Text('You Completed Section 1. Let\'s start Section 2'),
-          actions: [
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(builder: (context) => SecondInputFormPage()));
-              },
-              child: Text('OK'),
-            ),
-          ],
-        );
-      },
-    );
-}}
+}

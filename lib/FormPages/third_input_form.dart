@@ -1,17 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_fun/QuizOne/QuizOnePage.dart';
-import 'package:quiz_fun/QuizTwo/QuizFivePage.dart';
+import 'package:quiz_fun/QuizThree/QuizNinePage.dart';
 
-int groupValue = 2;
+class ThirdInputFormPage extends StatelessWidget {
+  const ThirdInputFormPage({super.key});
 
-class SecondInputFormPage extends StatefulWidget {
-  const SecondInputFormPage({super.key});
-
-  @override
-  State<SecondInputFormPage> createState() => _SecondInputFormPageState();
-}
-
-class _SecondInputFormPageState extends State<SecondInputFormPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,7 +36,7 @@ class _SecondInputFormPageState extends State<SecondInputFormPage> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "Phone Number",
+                            "Date of Birth",
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
@@ -55,74 +48,42 @@ class _SecondInputFormPageState extends State<SecondInputFormPage> {
 
                             child: TextField(
                               decoration: InputDecoration(
-                                  hintText: "Enter Your Phone here..."
+                                  hintText: "Enter Your Date of Birth here..."
                               ),
                             ),
                           ),
                         ],
                       ),
-                      SizedBox(height: 16,),
+                      SizedBox(height: 12,),
                       ///Email
                       Column(
                         mainAxisSize: MainAxisSize.min,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            "Sexual Orientation",
+                            "Postcode",
                             style: TextStyle(
                               fontSize: 20,
                               fontWeight: FontWeight.bold,
                               color: Colors.black,
                             ),
                           ),
-                          SizedBox(height:6,),
-                          Row(
-                            children: [
-                              Text(
-                                "Male",
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black.withOpacity(0.5),
-                                ),
+                          SizedBox(height: 2,),
+                          Container(
+
+                            child: TextField(
+                              decoration: InputDecoration(
+                                  hintText: "Enter Your Postcode here..."
                               ),
-                              Radio(
-                                  value: 0,
-                                  groupValue: groupValue,
-                                  onChanged: (data){
-                                    setState(() {
-                                      groupValue = 0;
-                                    });
-                                  }),
-                            ],
+                            ),
                           ),
-                          Row(
-                            children: [
-                              Text(
-                                "Female",
-                                style: TextStyle(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.black.withOpacity(0.5),
-                                ),
-                              ),
-                              Radio(
-                                  value: 1,
-                                  groupValue: groupValue,
-                                  onChanged: (data){
-                                    setState(() {
-                                      groupValue = 1;
-                                    });
-                                  }),
-                            ],
-                          )
                         ],
                       ),
                       Padding(
                         padding: const EdgeInsets.only(top: 22),
                         child: OutlinedButton(
                             onPressed: (){
-                              Navigator.of(context).push(MaterialPageRoute(builder: (context)=> Quizfivepage()));
+                              Navigator.of(context).push(MaterialPageRoute(builder: (context)=> Quizninepage()));
                             },
                             child: Text("Next",
                               style: TextStyle(

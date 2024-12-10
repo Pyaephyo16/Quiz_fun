@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_fun/QuizOne/QuizOnePage.dart';
+import 'package:quiz_fun/main.dart';
 
 class FirstInputFormPage extends StatelessWidget {
   const FirstInputFormPage({super.key});
 
+
+
   @override
   Widget build(BuildContext context) {
+
+    TextEditingController nameController = TextEditingController();
+
     return Scaffold(
       body: Stack(
         children: [
@@ -46,6 +52,7 @@ class FirstInputFormPage extends StatelessWidget {
                       Container(
 
                         child: TextField(
+                          controller: nameController,
                         decoration: InputDecoration(
                           hintText: "Enter Your Name here..."
                         ),
@@ -82,6 +89,7 @@ class FirstInputFormPage extends StatelessWidget {
                     padding: const EdgeInsets.only(top: 22),
                     child: OutlinedButton(
                         onPressed: (){
+                          userName = nameController.text;
                           Navigator.of(context).push(MaterialPageRoute(builder: (context)=> Quizonepage()));
                         },
                         child: Text("Next",

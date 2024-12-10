@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:quiz_fun/QuizOne/QuizTwoPage.dart';
+import 'package:quiz_fun/QuizTwo/QuizSixPage.dart';
 import 'package:quiz_fun/main.dart';
 
 class Quizfivepage extends StatefulWidget {
@@ -37,12 +38,12 @@ class _QuizfivepageState extends State<Quizfivepage> {
               children: [
                 Center(
                     child: Image.asset(
-                      "./asset/ans_1.jpg",
+                      "./asset/ans_5.jpg",
                       width: 200,height: 200,
                     )
                 ),
                 Text(
-                  "What’s the national flower of Japan?",
+                  "What is the largest mammal in the world?",
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
@@ -61,7 +62,7 @@ class _QuizfivepageState extends State<Quizfivepage> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Text(
-                          "Jasmine",
+                          "Elephant",
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -82,7 +83,7 @@ class _QuizfivepageState extends State<Quizfivepage> {
                     Row(
                       children: [
                         Text(
-                          "Rose",
+                          "Blue Whale",
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -113,7 +114,7 @@ class _QuizfivepageState extends State<Quizfivepage> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Text(
-                          "Cherry Blosm",
+                          "Dolphin",
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -134,7 +135,7 @@ class _QuizfivepageState extends State<Quizfivepage> {
                     Row(
                       children: [
                         Text(
-                          "Tulip",
+                          "Tiger",
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -162,7 +163,7 @@ class _QuizfivepageState extends State<Quizfivepage> {
                           onPressed: (){
                             setState(() {
                               isAppear = true;
-                              if(selectValue==2){
+                              if(selectValue==1){
                                 totalCorrectAnswer++;
                               }
                             });
@@ -178,7 +179,7 @@ class _QuizfivepageState extends State<Quizfivepage> {
                       padding: const EdgeInsets.only(top: 22),
                       child: OutlinedButton(
                           onPressed: (){
-                            Navigator.of(context).push(MaterialPageRoute(builder: (context) => QuizTwopage()));
+                            Navigator.of(context).push(MaterialPageRoute(builder: (context) => Quizsixpage()));
                           },
                           child: Text("Next",
                             style: TextStyle(
@@ -195,11 +196,11 @@ class _QuizfivepageState extends State<Quizfivepage> {
                     child: Visibility(
                       visible: isAppear,
                       child: Text(
-                        (selectValue == 2) ? "Correct" : "False",
+                        (selectValue == 1) ? "Correct" : "False",
                         style: TextStyle(
                           fontSize: 30,
                           fontWeight: FontWeight.bold,
-                          color: (selectValue == 2 ) ? Colors.green :Colors.red,
+                          color: (selectValue == 1) ? Colors.green :Colors.red,
                         ),),
                     )),
 
