@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:quiz_fun/QuizOne/QuizOnePage.dart';
-import 'package:quiz_fun/main.dart';
 
 class SmokeformPage extends StatelessWidget {
   const SmokeformPage({super.key});
